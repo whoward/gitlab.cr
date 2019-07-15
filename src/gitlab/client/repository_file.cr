@@ -52,7 +52,7 @@ module Gitlab
           "filepath" => filepath,
         }, headers: {
           "Accept" => "text/plain",
-        }).parse
+        }).to_s
       end
 
       private def file_contents_from_files(project_id : Int32, filepath : String, ref : String) : String
@@ -60,7 +60,7 @@ module Gitlab
           "ref" => ref,
         }, headers: {
           "Accept" => "text/plain",
-        }).parse
+        }).to_s
       end
     end
   end
